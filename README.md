@@ -11,10 +11,10 @@ You may use validator with validate function.
     
 
     path '/some/path' => sub {
-        my $params = validate
+        my $params = validate(
             name => { isa => 'Str', default => 'Nameless John' },
             age => { isa => 'Int' }
-        ;
+        );
     };
 
 
