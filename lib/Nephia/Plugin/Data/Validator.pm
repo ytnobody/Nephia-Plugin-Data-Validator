@@ -7,7 +7,7 @@ our $VERSION = "0.01";
 
 use Data::Validator;
 
-sub validate {
+sub validate (@) {
     my $caller = caller();
     no strict ('refs', 'subs');
     no warnings 'redefine';
@@ -33,7 +33,7 @@ You may use validator with validate function.
   nephia_plugins('Data::Validator)';
   
   path '/some/path' => sub {
-      my $params = validate(
+      my $params = validate (
           name => { isa => 'Str', default => 'Nameless John' },
           age => { isa => 'Int' }
       );

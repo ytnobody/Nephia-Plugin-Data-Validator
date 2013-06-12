@@ -12,7 +12,7 @@ use Mouse::Util::TypeConstraints;
 enum 'Sex' => qw( male female shemale );
 
 path '/validate' => sub {
-    return validate( 
+    return validate (
         name => { isa => 'Str' },
         age => { isa => 'Int', default => 72 },
         sex => { isa => 'Sex', default => 'shemale'}
