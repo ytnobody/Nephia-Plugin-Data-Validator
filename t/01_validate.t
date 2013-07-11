@@ -23,7 +23,13 @@ test_psgi
                 my $res = $cb->(GET $uri);
                 for my $key ( keys %{$opts{expect}} ) {
                     if ( $key eq 'content' ) {
-                        is_deeply( JSON->new->decode( $res->$key ), $opts{expect}->{$key} );
+                        my $data = JSON->new->decode( $res->$key );
+                        if ($data->{error}) {
+                            like $data->{error}, $opts{expect}->{$key}{error}, "error lile as ".$opts{expect}->{$key}{error};
+                        }
+                        else {
+                            is_deeply( $data, $opts{expect}->{$key} );
+                        }
                     }
                     else {
                         is $res->$key, $opts{expect}->{$key}, "$key is ".$opts{expect}->{$key};
@@ -33,37 +39,33 @@ test_psgi
 
             my %expect_basic = ( code => 200, content_type => 'application/json' );
 
-#             $test_req->( 
-#                 query => { name => 'Borgira', sex => 'female', age => 22 },
-#                 expect => { %expect_basic, 
-#                     content_length => 44, 
-#                     content => { name => "Borgira", sex => "female", age => 22 }
-#                 }
-#             );
+            $test_req->( 
+                query => { name => 'Borgira', sex => 'female', age => 22 },
+                expect => { %expect_basic, 
+                    content => { name => "Borgira", sex => "female", age => 22 }
+                }
+            );
 
             $test_req->( 
                 query => { name => 'Johnny' },
                 expect => { %expect_basic, 
-                    content_length => 42, 
                     content => { name => "Johnny", sex => "shemale", age => 72 }
                 }
             );
 
-#             $test_req->( 
-#                 query => { name => 'Johnny', sex => 'mail' },
-#                 expect => { 
-#                     code => 500,
-#                     content => qr[Invalid value for 'sex']
-#                 }
-#             );
-# 
-#             $test_req->( 
-#                 query => {},
-#                 expect => {
-#                     code => 500, 
-#                     content => qr[Missing parameter: 'name']
-#                 }
-#             );
+             $test_req->( 
+                 query => { name => 'Johnny', sex => 'mail' },
+                 expect => { 
+                     content => { error => qr/^Invalid value for 'sex'/ },
+                 }
+             );
+ 
+             $test_req->( 
+                 query => {},
+                 expect => {
+                     content => { error => qr/^Missing parameter: 'name'/ },
+                 }
+             );
         };
     }
 ;

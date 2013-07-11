@@ -25,7 +25,7 @@ my %args = (
 
     name            => 'Nephia-Plugin-Data-Validator',
     module_name     => 'Nephia::Plugin::Data::Validator',
-    allow_pure_perl => 0,
+    allow_pureperl => 0,
 
     script_files => [glob('script/*'), glob('bin/*')],
 
