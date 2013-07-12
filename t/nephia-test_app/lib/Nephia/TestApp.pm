@@ -4,7 +4,7 @@ use warnings;
 use Nephia;
 use utf8;
 
-our $VERSION = 0.03;
+our $VERSION = 0.04;
 
 nephia_plugins 'Data::Validator';
 
