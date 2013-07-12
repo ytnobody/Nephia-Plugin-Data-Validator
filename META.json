@@ -43,7 +43,7 @@
       "runtime" : {
          "requires" : {
             "Data::Validator" : "0",
-            "Nephia" : "0.31",
+            "Nephia" : "0.32",
             "perl" : "5.008005"
          }
       },
