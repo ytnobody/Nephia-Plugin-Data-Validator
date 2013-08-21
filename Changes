@@ -1,15 +1,15 @@
-Revision history for Perl extension Nephia-Plugin-Data-Validator
+Revision history for Perl extension PrimalNephia-Plugin-Data-Validator
 
 {{$NEXT}}
 
 0.04 2013-07-12T02:51:06Z
-    - bug fix : fix version for Nephia as 0.32
+    - bug fix : fix version for PrimalNephia as 0.32
 
 0.03 2013-07-12T02:02:52Z
-    - bug fix : specity version for Nephia as 0.31
+    - bug fix : specity version for PrimalNephia as 0.31
 
 0.02 2013-07-11T15:11:08Z
-    - refactor : compliant for Nephia-0.31
+    - refactor : compliant for PrimalNephia-0.31
 
 0.01 2013-06-07T01:34:36Z
 

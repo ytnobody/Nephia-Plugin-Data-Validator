@@ -1,10 +1,10 @@
 {
-   "abstract" : "A Nephia plugin that provides data-validation feature",
+   "abstract" : "A PrimalNephia plugin that provides data-validation feature",
    "author" : [
       "ytnobody <ytnobody@gmail.com>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Minilla/v0.5.5, CPAN::Meta::Converter version 2.130880",
+   "generated_by" : "Minilla/v0.6.3, CPAN::Meta::Converter version 2.130880",
    "license" : [
       "perl_5"
    ],
@@ -12,7 +12,7 @@
       "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
       "version" : "2"
    },
-   "name" : "Nephia-Plugin-Data-Validator",
+   "name" : "PrimalNephia-Plugin-Data-Validator",
    "no_index" : {
       "directory" : [
          "t",
@@ -43,7 +43,7 @@
       "runtime" : {
          "requires" : {
             "Data::Validator" : "0",
-            "Nephia" : "0.32",
+            "PrimalNephia" : "0.32",
             "perl" : "5.008005"
          }
       },
@@ -56,13 +56,13 @@
    "release_status" : "unstable",
    "resources" : {
       "bugtracker" : {
-         "web" : "https://github.com/ytnobody/Nephia-Plugin-Data-Validator/issues"
+         "web" : "https://github.com/ytnobody/PrimalNephia-Plugin-Data-Validator/issues"
       },
-      "homepage" : "https://github.com/ytnobody/Nephia-Plugin-Data-Validator",
+      "homepage" : "https://github.com/ytnobody/PrimalNephia-Plugin-Data-Validator",
       "repository" : {
          "type" : "git",
-         "url" : "git://github.com/ytnobody/Nephia-Plugin-Data-Validator.git",
-         "web" : "https://github.com/ytnobody/Nephia-Plugin-Data-Validator"
+         "url" : "git://github.com/ytnobody/PrimalNephia-Plugin-Data-Validator.git",
+         "web" : "https://github.com/ytnobody/PrimalNephia-Plugin-Data-Validator"
       }
    },
    "version" : "0.04"

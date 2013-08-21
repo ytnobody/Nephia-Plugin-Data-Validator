@@ -3,5 +3,5 @@ use warnings;
 use FindBin;
 
 use lib ("$FindBin::Bin/lib", "$FindBin::Bin/extlib/lib/perl5");
-use Nephia::TestApp;
-Nephia::TestApp->run();
+use PrimalNephia::TestApp;
+PrimalNephia::TestApp->run();

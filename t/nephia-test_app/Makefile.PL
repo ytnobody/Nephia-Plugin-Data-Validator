@@ -1,7 +1,7 @@
 use inc::Module::Install;
-all_from 'lib/Nephia/TestApp.pm';
+all_from 'lib/PrimalNephia/TestApp.pm';
 
-requires 'Nephia' => 0.01;
+requires 'PrimalNephia' => 0.01;
 
 tests 't/*.t';
 

@@ -1,12 +1,12 @@
 # NAME
 
-Nephia::Plugin::Data::Validator - A Nephia plugin that provides data-validation feature
+PrimalNephia::Plugin::Data::Validator - A PrimalNephia plugin that provides data-validation feature
 
 # SYNOPSIS
 
 You may use validator with validate function.
 
-    use Nephia;
+    use PrimalNephia;
     nephia_plugins('Data::Validator)';
     
 
@@ -21,7 +21,7 @@ You may use validator with validate function.
 
 # DESCRIPTION
 
-Nephia::Plugin::Data::Validator uses Data::Validator for validation backend.
+PrimalNephia::Plugin::Data::Validator uses Data::Validator for validation backend.
 
 See documentation of validate method and Data::Validator.
 

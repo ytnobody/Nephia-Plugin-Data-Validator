@@ -1,4 +1,4 @@
-package Nephia::Plugin::Bark;
+package PrimalNephia::Plugin::Bark;
 use Exporter 'import';
 our @EXPORT = qw[ bark barkbark ];
 

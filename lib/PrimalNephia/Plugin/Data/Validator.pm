@@ -1,4 +1,4 @@
-package Nephia::Plugin::Data::Validator;
+package PrimalNephia::Plugin::Data::Validator;
 use 5.008005;
 use strict;
 use warnings;
@@ -29,13 +29,13 @@ __END__
 
 =head1 NAME
 
-Nephia::Plugin::Data::Validator - A Nephia plugin that provides data-validation feature
+PrimalNephia::Plugin::Data::Validator - A PrimalNephia plugin that provides data-validation feature
 
 =head1 SYNOPSIS
 
 You may use validator with validate function.
 
-  use Nephia;
+  use PrimalNephia;
   nephia_plugins('Data::Validator)';
   
   path '/some/path' => sub {
@@ -48,7 +48,7 @@ You may use validator with validate function.
 
 =head1 DESCRIPTION
 
-Nephia::Plugin::Data::Validator uses Data::Validator for validation backend.
+PrimalNephia::Plugin::Data::Validator uses Data::Validator for validation backend.
 
 See documentation of validate method and Data::Validator.
 
